@@ -18,7 +18,6 @@ The service should be able to:
 -   Given a list of words and their substitutions, replace all occurrences of the specified words with their substitutions. (ie. replace every Bees with BEES and so on)
 -   Given a list of words, add a random Chuck Norris animal fact after the paragraph where such words are found. (possible source https://api.chucknorris.io/)
 
-Further requirements would be added in the next sprint.
 
 ### A test case
 
