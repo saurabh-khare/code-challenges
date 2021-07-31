@@ -1,0 +1,9 @@
+{
+  "name": "coding-challenge",
+  "version": "1.0.0",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "test": "node index.test.js"
+  }
+}
