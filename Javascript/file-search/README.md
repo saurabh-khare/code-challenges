@@ -1,6 +1,6 @@
 ## Task
 
-You will need to implement a function that will get an array of files (files can be directories) and an array of ignore patterns and will return an array of all files full paths (excluding directories!) that are not ignored.
+Implement a function that will get an array of files (files can be directories) and an array of ignore patterns and will return an array of all files full paths (excluding directories!) that are not ignored.
 
 To keep it simple, ignore patterns are always absolute paths and do not contain wildcards.
 
@@ -53,5 +53,5 @@ getAllFilesExcept(
 ### Run Tests
 
 ```bash
-node index.test.js
+npm test
 ```
