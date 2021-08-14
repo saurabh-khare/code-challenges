@@ -56,12 +56,33 @@ class LinkedList {
     }
     return currNode;
   }
+
+  reverse() {
+    let currNode = this.head;
+    this.tail = this.head;
+    let nextNode = currNode.next;
+    let holder = currNode.next.next;
+    while (nextNode) {
+      nextNode.next = currNode;
+      currNode = nextNode;
+      nextNode = holder;
+      if (holder) {
+        holder = holder.next;
+      }
+    }
+    this.tail.next = null;
+    this.head = currNode;
+  }
 }
 
 const l = new LinkedList(5);
 l.append(10);
 l.append(20);
 l.append(30);
+l.append(40);
 l.prepend(0);
 l.insert(15, 2);
+l.print();
+l.reverse();
+console.log("**************reverse list*******************");
 l.print();
