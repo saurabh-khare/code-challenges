@@ -78,12 +78,21 @@ class BinarySearchTree {
 
   find(value) {
     let currNode = this.root;
+    let padding = "";
     while (currNode) {
-      console.log(currNode.value);
+      padding += " ";
+      console.log(padding + currNode.value);
       if (currNode.value === value) return true;
       if (value < currNode.value) currNode = currNode.left;
       if (value > currNode.value) currNode = currNode.right;
     }
+  }
+
+  getHeight(root) {
+    if (!root) return -1;
+    const leftSubtreeHeight = this.getHeight(root.left);
+    const rightSubtreeHeight = this.getHeight(root.right);
+    return Math.max(leftSubtreeHeight, rightSubtreeHeight) + 1;
   }
 }
 
@@ -94,6 +103,9 @@ bst.insert(3);
 bst.insert(5);
 bst.insert(7);
 bst.insert(6);
+console.log("Traversing path to find 6");
 bst.find(6);
-console.log("*******************");
+console.log("Traversing whole tree in BFS");
 bst.traverseBfs();
+console.log("Height of the tree");
+console.log(bst.getHeight(bst.root));
